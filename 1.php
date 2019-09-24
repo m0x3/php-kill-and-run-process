@@ -34,7 +34,7 @@ if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
         }
         //var_dump(shell_exec('START /B /W "" "'.$pypath.'" "'.$script.'"')); //ждем ответ
         //shell_exec('start /b "" "'.$pypath.'" "'.$script.'"'); //не ждем ответ
-        pclose(popen('start /B "'.$pypath.'" "'.$script.'"', "r")); //не ждем ответ
+        pclose(popen('start /B "" "'.$pypath.'" "'.$script.'"', "r")); //не ждем ответ
 
         break; //выходим если нашли интерпретатор
       }
